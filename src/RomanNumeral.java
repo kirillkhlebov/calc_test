@@ -18,7 +18,6 @@ enum RomanNumeral {
     }
 
     public static int toInt(String romanNumeral) {
-        romanNumeral = romanNumeral.toUpperCase();
         int result = 0;
         int i = 0;
         while (i < romanNumeral.length()) {
@@ -37,7 +36,7 @@ enum RomanNumeral {
             i++;
         }
         if (!romanNumeral.equals(toRomanNumeral(result))) { // проверка коррекности перекодировки
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Римские числа должны быть заданы в диапазоне от I до X / Неправильная запись римской цифры.");
         }
         return result;
     }

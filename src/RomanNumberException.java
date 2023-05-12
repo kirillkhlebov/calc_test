@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class RomanNumberException {
+class RomanNumberException extends Exception {
+    public RomanNumberException(String description) {
+        super (description);
+    }
 }
